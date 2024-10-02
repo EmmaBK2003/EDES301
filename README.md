@@ -1,2 +1,2 @@
-# ENGI301
-Repository for ENGI301 course work
+# EDES301
+Repository for EDES301 course work
