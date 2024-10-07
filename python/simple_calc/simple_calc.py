@@ -44,6 +44,10 @@ Operations:
   - "-" : subtraction
   - "*" : multiplication
   - "/" : division
+  - ">>" : right shift
+  - "<<" : left shift
+  - "%" : modulo
+  - "**" : exponentiation
 
 Error conditions:
   - Invalid operator --> Program should exit
@@ -75,7 +79,11 @@ operators = {
     "+" : operator.add,
     "-" : operator.sub,
     "*" : operator.mul,
-    "/" : operator.truediv
+    "/" : operator.truediv,
+    ">>" : operator.rshift,
+    "<<" : operator.lshift,
+    "%" : operator.mod,
+    "**" : operator.pow,
 }
 
 
@@ -95,7 +103,7 @@ def get_user_input():
         # NOTE - fill out the contents.  This pass statement should be removed    
         number1  = float(input("Input first number:  "))
         number2  = float(input("Input second number: "))
-        function = input("Input function (+, -, *, /): ")
+        function = input("Input function (+, -, *, /, >>, <<, %, **): ")
         
         func = operators[function]
         
