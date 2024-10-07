@@ -59,7 +59,12 @@ Error conditions:
 # NOTE - Add import statements to allow access to Python library functions
 # NOTE - Hint:  Look at  https://docs.python.org/3/library/operator.html
 
-import operator
+import operator      # pip install operator
+# make code compatible with both python 2 and python 3
+import future        # pip install future
+import builtins      # pip install future
+import past          # pip install future
+import six           # pip install six
 
 # ------------------------------------------------------------------------
 # Constants
