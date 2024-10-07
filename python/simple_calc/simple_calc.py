@@ -60,6 +60,7 @@ Error conditions:
 # NOTE - Hint:  Look at  https://docs.python.org/3/library/operator.html
 
 import operator      # pip install operator
+import builtins      # pip install builtins library
 
 
 # ------------------------------------------------------------------------
@@ -85,6 +86,12 @@ operators = {
     "<<" : operator.lshift,
     "%" : operator.mod,
     "**" : operator.pow,
+}
+
+# NOTE - Global variable to map input to a version
+# NOTE - compatible with python2 and python3
+builtins = {
+    "input" : builtins.input,
 }
 
 
