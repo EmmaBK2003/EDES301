@@ -89,7 +89,7 @@ operators = {
 }
 
 # NOTE - Global variable to map input to a version
-# NOTE - compatible with python2 and python3
+# NOTE - that is compatible with python2 and python3
 builtins = {
     "input" : builtins.input,
 }
