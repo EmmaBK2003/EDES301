@@ -37,7 +37,6 @@ Use the following hardware components to make light-sensitive curtains:
   - Stepper motor and driver 
 
 User Interaction:
-–User must specify GPIO pins of stepper motor and buttons
 –Pressing the close button will close curtains while pressed
 –Pressing the open button will open curtains when pressed
 –Light sensor will automatically open curtains when light is 
