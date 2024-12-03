@@ -194,9 +194,6 @@ import time
         motor.cleanup()
         print("Test complete.")
 
-if __name__ == "__main__":
-    main()
-
 
 
 
