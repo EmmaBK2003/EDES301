@@ -18,7 +18,7 @@ Autoboot can be implemented using the following steps:
 3. Reboot and test
 
 # Software Operation
-Once running and tested, the program should autoboot and not require the Pocket Beagle to be connected to a computer. It should autoboot when powered with a wall power supply. The user can interact with the device by pressing the yellow button to open curtains, and the black button to close curtains. The light sensor will automatically trigger the curtains to open when the level of light is above a threshold value (chosen based on the lux value for sunrise, 400 lux). The light sensor should be placed such that it is as close as possible to an unobstructed window and is facing the outside. 
+The user will need to measure their curtain setup in order to determine the appropriate amount of steps to enter as the constant for opening and closing the curtains. Once running and tested, the program should autoboot and not require the Pocket Beagle to be connected to a computer. It should autoboot when powered with a wall power supply. The user can interact with the device by pressing the yellow button to open curtains, and the black button to close curtains. The light sensor will automatically trigger the curtains to open when the level of light is above a threshold value (chosen based on the lux value for sunrise, 400 lux). The light sensor should be placed such that it is as close as possible to an unobstructed window and is facing the outside. 
 
 # Hardware Setup
 The docs folder contains a system diagram with power and connections. For more information about the hardware setup for this project, see my Hackster entry: https://www.hackster.io/ebk1/edes-301-smart-curtains-using-pocketbeagle-3fb471
