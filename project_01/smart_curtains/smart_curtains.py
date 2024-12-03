@@ -74,22 +74,26 @@ class SmartCurtains:
         self.debug = True
 
         self._setup()
+      # End def
 
     def _setup(self):
         """Setup the hardware components."""
         self.stepper_motor.stop()
+      # End def
 
     def open_curtain(self):
         """Open the curtain."""
         if self.debug:
             print("Opening the curtain...")
         self.stepper_motor.open_curtain()
+      # End def
 
     def close_curtain(self):
         """Close the curtain."""
         if self.debug:
             print("Closing the curtain...")
         self.stepper_motor.close_curtain()
+      # End def
 
     def check_light_and_open(self):
         """Check the light level and open the curtain if the threshold is exceeded."""
@@ -98,6 +102,7 @@ class SmartCurtains:
             print("Light level: {light_level} Lux")
         if light_level > LIGHT_THRESHOLD:
             self.open_curtain()
+          # End def
 
     def run(self):
         """Run the smart curtains."""
@@ -120,6 +125,7 @@ class SmartCurtains:
                 # Cleanup on interrupt
                 self.cleanup()
                 break
+              # end def
 
     def cleanup(self):
         """Cleanup the hardware components."""
@@ -128,6 +134,9 @@ class SmartCurtains:
         self.stepper_motor.stop()
         self.open_button.cleanup()
         self.close_button.cleanup()
+  # end def
+
+# end class
 
 # ------------------------------------------------------------------------
 # Main script
