@@ -35,10 +35,17 @@ Driver for control of curtain opening and closing mechanisms using stepper motor
 control driver using GPIO pins
 
 Uses: 
-  - 28BYJ-48 Stepper Motor and Driver Board
+  - 28BYJ-48 Stepper Motor and Driver Board (4 GPIO pins to control)
+
+open_curtain() rotates motor pre-specified amount of steps forward
+close_curtain() rotates motor same amount of steps but backwards
 
 
 """
+
+# ------------------------------------------------------------------------
+# Functions / Classes
+# ------------------------------------------------------------------------
 
 import time
 import Adafruit_BBIO.GPIO as GPIO
@@ -64,12 +71,16 @@ class StepperMotor:
         # Initialize the motor to the "stopped" state
         self.is_open = False
         self.is_moving = False
+      
+      # End def
 
     def _step(self, sequence):
         """ Step the motor one step in the current direction. """
         for i in range(4):
             GPIO.output(self.pins[i], sequence[i])
         time.sleep(0.01)
+      
+      # End def
 
     def open_curtain(self):
         """ Open the curtain by rotating the stepper motor. """
@@ -92,6 +103,8 @@ class StepperMotor:
         self.is_open = True
         self.is_moving = False
         print("Curtain is open.")
+      
+      # End def
 
     def close_curtain(self):
         """ Close the curtain by rotating the stepper motor. """
@@ -114,16 +127,76 @@ class StepperMotor:
         self.is_open = False
         self.is_moving = False
         print("Curtain is closed.")
+      
+      # End def
 
     def is_stopped(self):
         """ Check if the stepper motor is stopped """
         return not self.is_moving
+      
+      # End def
 
     def is_open(self):
         """ Return True if the curtain is open, otherwise False. """
         return self.is_open
+      
+      # End def
 
     def cleanup(self):
         """ Clean up GPIO pins when done. """
         for pin in self.pins:
             GPIO.cleanup(pin)
+          
+      # End def
+
+# End Class
+
+# ------------------------------------------------------------------------
+# Main script
+# ------------------------------------------------------------------------
+
+if __name__ == '__main__':
+
+import time
+
+    """Test the stepper motor functionality."""
+    print("Stepper Motor Test")
+    
+    # Initialize the stepper motor
+    # Specify the pins connected to IN1, IN2, IN3, IN4
+    motor_pins = [P2_18, P2_20, P2_22, P2_24]
+    motor = StepperMotor(motor_pins)
+
+    try:
+        # Test: Open curtains
+        print("Opening curtains...")
+        motor.open_curtain()
+        time.sleep(2)  # Allow time for the motor to complete opening
+        motor.stop()
+        print("Curtains opened.")
+
+        # Pause before closing
+        time.sleep(2)
+
+        # Test: Close curtains
+        print("Closing curtains...")
+        motor.close_curtain()
+        time.sleep(2)  # Allow time for the motor to complete closing
+        motor.stop()
+        print("Curtains closed.")
+        
+        # Use a Keyboard Interrupt (i.e. "Ctrl-C") to exit the test
+        print("Test interrupted by user.")
+      
+    finally:
+        # Cleanup the motor resources
+        print("Cleaning up...")
+        motor.cleanup()
+        print("Test complete.")
+
+if __name__ == "__main__":
+    main()
+
+
+
+
