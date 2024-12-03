@@ -10,7 +10,7 @@ sudo pip3 install --upgrade Adafruit_BBIO
 sudo pip3 install adafruit-blinka
 sudo pip3 install adafruit-circuitpython-bh1750
 
-Download all files in the software folder to your Pocket Beagle and make sure they are saved. 
+Download all files in smart_curtains folder to your Pocket Beagle and make sure they are saved. 
 
 Autoboot can be implemented using the following steps:
 1. sudo crontab -e
