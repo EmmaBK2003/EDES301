@@ -46,10 +46,10 @@ can be changed
 if user does not want curtains to open from light
  
  """
-import time
-from button import ThreadedButton
-import stepper_motor 
-import light as LIGHT
+import  time
+from  button import  ThreadedButton
+import  stepper_motor 
+import  light as  LIGHT
 
 # ------------------------------------------------------------------------
 # Constants
