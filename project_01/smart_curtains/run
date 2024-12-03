@@ -41,7 +41,7 @@ cd /var/lib/cloud9/EDES301/project_01/smart_curtains
 dirs=(
     '/var/lib/cloud9/EDES301/project_01/smart_curtains/button:'
     '/var/lib/cloud9/EDES301/project_01/smart_curtains/threaded_button:'
-    '/var/lib/cloud9/EDES301/project_01/smart_curtains/stepper:'
+    '/var/lib/cloud9/EDES301/project_01/smart_curtains/stepper_motor:'
     '/var/lib/cloud9/EDES301/project_01/smart_curtains/light:'
 )
 
