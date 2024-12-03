@@ -3,7 +3,7 @@
 # Smart Curtains - Configure Pins
 # --------------------------------------------------------------------------
 # License:   
-# Copyright 2024 Emma Kirchhoff
+# Copyright 2024 - Emma Kirchhoff
 # 
 # Redistribution and use in source and binary forms, with or without 
 # modification, are permitted provided that the following conditions are met:
@@ -38,7 +38,7 @@
 # 
 # --------------------------------------------------------------------------
 
-# I2C2
+# I2C2 for the light sensor
 config-pin P2_09 i2c
 config-pin P2_11 i2c
 
