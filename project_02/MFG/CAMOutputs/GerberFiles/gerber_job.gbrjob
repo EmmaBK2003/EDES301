@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2024-12-17T23:13:28Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.6.2"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.53,
+        "LayerNumber": 4,
+        "Name": {
+            "ProjectId": "EtchASketch"
+        },
+        "Owner": "Emma Kirchhoff <ebk1@rice.edu>",
+        "Size": {
+            "X": 127,
+            "Y": 101.6
+        }
+    }
+}
