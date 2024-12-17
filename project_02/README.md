@@ -1,1 +1,2 @@
-
+This project involves designing a PCB for an Etch-A–Sketch, including system and mechanical block diagrams, all EAGLE files for the CAD of the PCB schematics and layout, and the associated manufacturing files needed to make the board. 
+The Etch-A–Sketch is powered by a PocketBeagle computer and includes a USB port for expansion. The SPI screen is used to display the drawing made by the user. There are two buttons – one is used to change color, and the other is used to reset the display screen. The two potentiometers are for the user to create the drawing. The red, green, and blue LEDs are to show which color is currently selected. 
